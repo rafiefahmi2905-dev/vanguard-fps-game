@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VANGUARD PROTOCOL // Tactical FPS</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Rajdhani & Orbitron -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Konfigurasi Tema Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['Orbitron', 'sans-serif'],
+                        sans: ['Rajdhani', 'sans-serif'],
+                    },
+                    colors: {
+                        tactical: {
+                            dark: '#090b10',
+                            panel: '#111622',
+                            accent: '#ff4655',
+                            cyan: '#00f0ff',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Menghubungkan ke file CSS eksternal (mengarah ke folder src) -->
+    <link rel="stylesheet" href="./src/input.css">
+</head>
+<body class="scanlines bg-grid-pattern antialiased selection:bg-tactical-accent selection:text-white">
+
+    <!-- NAVBAR / TOP HUD -->
+    <header class="fixed top-0 w-full z-40 bg-tactical-dark/85 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-9 h-9 bg-tactical-accent flex items-center justify-center clip-button font-display font-black text-white text-xl group-hover:bg-tactical-cyan group-hover:text-black transition">
+                    V
+                </div>
+                <div>
+                    <span class="font-display font-bold text-xl tracking-wider text-white block leading-none">VANGUARD</span>
+                    <span class="text-xs tracking-[0.3em] text-tactical-accent font-semibold">PROTOCOL // 09</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-semibold tracking-widest text-sm uppercase">
+                <a href="#operators" class="hover:text-tactical-accent transition">Operators</a>
+                <a href="#arsenal" class="hover:text-tactical-accent transition">Arsenal</a>
+                <a href="#maps" class="hover:text-tactical-accent transition">Combat Zones</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <a href="#play" class="bg-tactical-accent hover:bg-red-600 text-white font-display font-bold text-xs tracking-widest uppercase px-6 py-3 clip-button transition shadow-[0_0_20px_rgba(255,70,85,0.4)]">
+                Play Free Now
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute top-1/4 -left-20 w-96 h-96 bg-tactical-accent/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-tactical-cyan/15 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center relative z-10">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 text-tactical-cyan text-xs font-bold tracking-[0.25em] uppercase">
+                    <span class="w-2 h-2 bg-tactical-cyan animate-ping"></span>
+                    Season 04: Shadow Strike Live
+                </div>
+
+                <h1 class="font-display font-black text-5xl sm:text-6xl lg:text-7xl uppercase leading-[1.05] tracking-tight text-white">
+                    Precision Is <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-tactical-accent to-orange-500">
+                        Survival.
+                    </span>
+                </h1>
+
+                <p class="text-slate-300 text-lg sm:text-xl max-w-xl leading-relaxed font-medium">
+                    Pertempuran taktis 5v5 berbasis refleks cepat, balistik realistis, dan kemampuan operator unik. Kuasai sudut tembak, koordinasikan tim, dan dominasi zona tempur.
+                </p>
+
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <button class="bg-tactical-accent hover:bg-red-600 text-white font-display font-bold tracking-widest uppercase px-8 py-4 clip-button transition flex items-center gap-3">
+                        <span>Deploy Now</span>
+                        <span>→</span>
+                    </button>
+                    <button class="bg-white/5 hover:bg-white/10 border border-white/20 text-white font-display font-bold tracking-widest uppercase px-8 py-4 clip-button transition">
+                        Watch Trailer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
